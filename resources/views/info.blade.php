@@ -28,7 +28,7 @@
         </li>
         
         <li class="nav-item">
-          <a class="nav-link text-white" href="{{route('servizi')}}" >Servizi</a>
+          <a class="nav-link text-white" href="{{route('servizi',['id' => 1])}}" >Servizi</a>
         </li>
       </ul>
       <form class="d-flex" role="search">

@@ -11,7 +11,7 @@ Route::get('/info', function () {
 })->name('info');
 
 
-Route::get('/servizi', function () {
+Route::get('/servizi/{id}', function ($id) {
      $links=[
         [
             "id"=>1,
@@ -30,7 +30,9 @@ Route::get('/servizi', function () {
         ],
     ];
    
-            return view('servizi', ['serviziolink' => $links]);
+           
+       return view('servizi', ['serviziolink' => $links,'id'=>$id]);
+    
         
     
 })->name('servizi');

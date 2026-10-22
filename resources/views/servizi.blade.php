@@ -30,7 +30,7 @@
         </li>
         
         <li class="nav-item">
-          <a class="nav-link text-white" href="{{route('servizi')}}" >Servizi</a>
+          <a class="nav-link text-white" href="{{route('servizi',['id' => 1])}}" >Servizi</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
@@ -49,7 +49,9 @@
       <h1 class="text-white text-center mb-5">Servizi:</h1>
       <ul>
       @foreach ($serviziolink as $item)
-          <li><a href="{{$item['link']}}">{{$item['name']}}</a></li>
+          <li>
+             <a href="{{ $item['link'] }}">{{ $item['name'] }}</a>
+          </li>
       @endforeach
       </ul>
       <p class="text-white text-center fs-4">
