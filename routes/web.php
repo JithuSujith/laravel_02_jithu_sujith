@@ -3,7 +3,84 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('Homepage');
+
+ $articles = [
+
+    [
+        'id' => 1,
+        'name' => 'Attack on Titan',
+        'image' => 'images/Attack on titans.jpg',
+        'story' => 'Humanity fights for survival behind massive walls against giant, man-eating Titans in a dark, twist-filled war story.'
+    ],
+
+    [
+        'id' => 2,
+        'name' => 'Fullmetal Alchemist: Brotherhood',
+        'image' => 'images/full-metal-alchemist-brotherhood-wallpaper-preview.jpg',
+        'story' => " Two brothers use alchemy to search for a Philosopher's Stone to restore their bodies after a failed ritual."
+    ],
+
+    [
+        'id' => 3,
+        'name' => 'One Piece',
+        'image' => 'images/onepiece.png',
+        'story' => ' Monkey D. Luffy and his pirate crew sail across the ocean to find the ultimate treasure and become King of the Pirates.'
+    ],
+
+    [
+        'id' => 4,
+        'name' => 'HunterxHunter',
+        'image' => 'images/hunterXhunter.jpg',
+        'story' => 'Gon sets out to pass the dangerous Hunter Exam and find his long-lost father.'
+    ],
+
+    [
+        'id' => 5,
+        'name' => 'Death Note',
+        'image' => 'images/DeathNote.png',
+        'story' => 'A high school student discovers a supernatural notebook that kills anyone whose name is written inside.'
+    ],
+
+    [
+        'id' => 6,
+        'name' => 'Cowboy Bebop',
+        'image' => 'images/cowboy bepop.jpg',
+        'story' => 'A crew of bounty hunters travels across the solar system, chasing targets while escaping their own pasts.'
+    ],
+
+    [
+        'id' => 7,
+        'name' => 'Frieren: Beyond Journey’s End',
+        'image' => 'images/wallpapersden.com_frieren-hd-frieren-beyond-journey-s-end_4500x2761.jpg',
+        'story' => 'An elven mage outlives her heroic companions and begins a journey to understand human life and emotions.'
+    ],
+
+    [
+        'id' => 8,
+        'name' => 'Dragon Ball Z',
+        'image' => 'images/DragonBallZ.jpg',
+        'story' => 'Goku and his friends defend Earth against powerful enemies in epic battles that push their strength to the limit.'
+    ],
+
+    [
+        'id' => 9,
+        'name' => 'Vinland Saga',
+        'image' => 'images/vinland saga.jpeg',
+        'story' => "Thorfinn, a young Viking, seeks revenge for his father's death while discovering a path toward peace."
+    ],
+
+    [
+        'id' => 10,
+        'name' => 'Steins;Gate',
+        'image' => 'images/steins gate.jpg',
+        'story' => 'A scientist and his friends discover a way to send messages into the past, triggering dangerous timeline changes.'
+    ],
+];
+     
+
+     return view('Homepage',['articles'=>$articles]);
+
+     
 })->name('homepage');
 
 Route::get('/info', function () {
@@ -57,15 +134,15 @@ $articles = [
 
     [
         'id' => 3,
-        'name' => 'images/onepiece.png',
+        'name' => 'One Piece',
         'image' => 'images/one-piece.jpg',
         'story' => 'One Piece follows Monkey D. Luffy, an adventurous young pirate who dreams of becoming the King of the Pirates. Inspired by the pirate Shanks, Luffy sets out to find the legendary treasure known as the One Piece, which was left behind by the previous Pirate King, Gol D. Roger. After eating a mysterious Devil Fruit, Luffy gains the ability to stretch his body like rubber, although he loses the ability to swim. During his journey, he recruits a diverse crew called the Straw Hat Pirates. Each member has a personal dream, including becoming the world’s greatest swordsman, drawing a map of the entire world, and discovering the true history of the seas. Together, they explore strange islands, encounter powerful enemies, and become involved in conflicts that affect entire nations. Their adventures bring them into confrontation with rival pirates, corrupt rulers, and the powerful World Government. Despite the dangers they face, the crew continues moving forward because of their friendship and determination. The story combines comedy, emotional moments, exciting battles, and mysteries that unfold over many adventures. At its heart, One Piece is about freedom, loyalty, dreams, and the importance of standing beside friends even when the world seems determined to stop you.'
     ],
 
     [
         'id' => 4,
-        'name' => 'images/hunterXhunter.jpg',
-        'image' => 'images/hunter-x-hunter.jpg',
+        'name' => 'HunterXHunter',
+        'image' => 'images/hunterXhunter.jpg',
         'story' => 'Hunter x Hunter follows Gon Freecss, a cheerful and determined boy who discovers that his father, Ging Freecss, is alive and is a legendary Hunter. Hunters are licensed adventurers who undertake dangerous missions involving treasure, rare creatures, criminals, and unexplored territories. Wanting to understand why his father chose this life, Gon leaves his home to take the difficult Hunter Examination. Along the way, he meets Killua Zoldyck, a boy from a famous family of assassins, as well as Kurapika and Leorio, who have their own ambitions. The four develop strong friendships while facing dangerous tests and powerful opponents. After becoming Hunters, Gon and his friends explore a world full of hidden abilities, political conflicts, and extraordinary dangers. They learn about Nen, a technique that allows individuals to control and use their life energy in unique ways. Their adventures lead them into conflicts with criminals, dangerous organizations, and increasingly powerful enemies. As the story develops, the characters discover that achieving their goals often requires difficult sacrifices. Hunter x Hunter combines strategic battles, humor, emotional storytelling, and complex moral questions. It explores friendship, ambition, revenge, and the consequences of pursuing one’s desires, showing that the world is far more complicated than it first appears.'
     ],
 
